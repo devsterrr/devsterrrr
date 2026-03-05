@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+}
+
+.container {
+    width: 600px;
+    margin: 40px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.event-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.event-form input,
+.event-form select,
+.event-form button {
+    padding: 5px;
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+}
+
+.event-list li {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    color: red;
+    text-decoration: none;
+}
+
+.priority-high {
+    color: red;
+}
+
+.priority-medium {
+    color: orange;
+}
+
+.priority-low {
+    color: green;
+}
