@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Планувальник</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Планувальник задач</h1>
+
+    <form method="POST">
+
+        <input type="text" name="task" placeholder="Назва завдання" required>
+        <input type="date" name="date">
+
+        <select name="country">
+            <option value="Україна">Україна</option>
+            <option value="Польща">Італія</option>
+            <option value="Німеччина">Франція</option>
+            <option value="США">США</option>
+            <option value="Франція">Іспанія</option>
+        </select>
+
+        <select name="priority">
+            <option value="Низький">Низький</option>
+            <option value="Середній">Середній</option>
+            <option value="Високий">Високий</option>
+        </select>
+
+        <button type="submit">Додати</button>
+
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+        <li>
+            <b>{{ task.task }}</b> | {{ task.date }} | Країна: {{ task.country }} | Пріоритет: {{ task.priority }}
+            <a href="{{ url_for('delete_task', task_id=task.id) }}">Видалити</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+</body>
+</html>
