@@ -1,0 +1,214 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #D4E7EF 45%, #8EB4C2 100%);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    padding: 30px 0;
+}
+
+.header {
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #5BA3B8;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5BA3B8;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.social a {
+    color: #5BA3B8;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.main-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.content {
+    max-width: 550px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.btn {
+    background-color: #1E4D56;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 600px;
+}
+
+.plate {
+    width: 100%;
+    display: block;
+    filter: drop-shadow(-10px 20px 30px rgba(0,0,0,0.1));
+}
+
+.lemon {
+    position: absolute;
+    width: 140px;
+    bottom: -20px;
+    left: 40px;
+    z-index: 2;
+}
+
+
+
+.categories {
+    padding: 80px 0;
+}
+
+.categories-row {
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.category-card {
+    width: 32%;
+    text-align: center;
+}
+
+.category-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+.about {
+    padding: 50px 0;
+}
+
+.about-row {
+    justify-content: space-between;
+    gap: 120px;
+}
+
+.about-image img {
+    width: 650px;
+}
+
+.about-text h2 {
+  font-size: 30px;
+    margin-bottom: 20px;
+    color: #7A3E3E;
+}
+
+
+
+
+.offers {
+    background-color: #1E4D56;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.offers-title {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.offers-row {
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.offer-card {
+    position: relative;
+    width: 32%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.offer-card img {
+       width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offer-card span {
+      position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
