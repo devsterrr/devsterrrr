@@ -1,0 +1,67 @@
+body {
+    font-family: Arial;
+    background: #f4f6f8;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #222;
+    color: white;
+    padding: 15px 0;
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: blue;
+    color: white;
+}
+
+.form input, .form textarea {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 300px;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-card {
+    background: white;
+    padding: 15px;
+    width: 200px;
+}
+
+.book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.big-img {
+    width: 300px;
+}
+
+.delete {
+    color: red;
+}
