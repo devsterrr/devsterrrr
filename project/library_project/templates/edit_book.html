@@ -1,0 +1,15 @@
+<form method="POST" class="form-edit">
+
+    <input type="text" name="title" value="{{ book['title'] }}" placeholder="Назва">
+
+    <input type="text" name="author" value="{{ book['author'] }}" placeholder="Автор">
+
+    <input type="text" name="year" value="{{ book['year'] }}" placeholder="Рік">
+
+    <input type="text" name="image_url" value="{{ book['image_url'] }}" placeholder="URL картинки">
+
+    <textarea name="description" placeholder="Опис">{{ book['description'] }}</textarea>
+
+    <button type="submit" class="btn-save">Зберегти</button>
+
+</form>

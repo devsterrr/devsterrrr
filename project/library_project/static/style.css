@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #222;
+    color: white;
+    padding: 15px 0;
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.form input,
+.form textarea {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.book-card {
+    flex: 0 0 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book-card h4 {
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.book-card p {
+    margin: 3px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.book-card a {
+    display: inline-block;
+    margin: 5px 3px;
+    padding: 6px 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.book-card a[href*="book"] {
+    background: #3498db;
+    color: white;
+}
+
+.book-card a[href*="edit"] {
+    background: #f1c40f;
+    color: black;
+}
+
+.delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.big-img {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.form-edit {
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.form-edit input,
+.form-edit textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.form-edit textarea {
+    height: 100px;
+}
+
+.btn-save {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-save:hover {
+    background: #27ae60;
+}
