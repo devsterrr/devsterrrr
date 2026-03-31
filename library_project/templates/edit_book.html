@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-card">
+    <form method="POST" class="form-edit">
+        <h2>Редагувати книгу</h2>
+        
+        <div class="form-group">
+            <label>Назва книги</label>
+            <input type="text" name="title" value="{{ book['title'] }}" placeholder="Назва">
+        </div>
+
+        <div class="form-group">
+            <label>Автор</label>
+            <input type="text" name="author" value="{{ book['author'] }}" placeholder="Автор">
+        </div>
+
+        <div class="form-group">
+            <label>Рік видання</label>
+            <input type="text" name="year" value="{{ book['year'] }}" placeholder="Рік">
+        </div>
+
+        <div class="form-group">
+            <label>Посилання на обкладинку</label>
+            <input type="text" name="image_url" value="{{ book['image_url'] }}" placeholder="URL картинки">
+        </div>
+
+        <div class="form-group">
+            <label>Опис</label>
+            <textarea name="description" placeholder="Опис">{{ book['description'] }}</textarea>
+        </div>
+
+        <button type="submit" class="btn-save">Зберегти зміни</button>
+    </form>
+</div>
+{% endblock %}
