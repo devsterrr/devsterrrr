@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Мої діалоги</h2>
+
+<ul>
+    {% for dialog in dialogs %}
+        <li>
+            <a href="{% url 'chat_detail' dialog.username %}">
+                <strong>{{ dialog.username }}</strong>
+            </a>
+        </li>
+    {% empty %}
+        <li>У вас поки немає активних діалогів.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

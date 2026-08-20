@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ movie.title }} ({{ movie.year }})</h2>
+<p>{{ movie.description }}</p>
+
+{% if user.is_authenticated %}
+    <a href="{% url 'movie_update' movie.pk %}">Редагувати фільм</a> | 
+{% endif %}
+<a href="{% url 'movie_list' %}">← Назад до списку</a>
+
+<hr>
+<h3>Коментарі</h3>
+
+{% if user.is_authenticated %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Залишити коментар</button>
+    </form>
+{% else %}
+    <p><a href="{% url 'login' %}">Увійдіть</a>, щоб залишити коментар.</p>
+{% endif %}
+
+<br>
+<ul>
+    {% for comment in comments %}
+        <li>
+            <strong>{{ comment.author.username }}</strong> 
+            <small>({{ comment.created_at|date:"d.m.Y H:i" }})</small>:
+            <p>{{ comment.text }}</p>
+            {% if comment.author == user %}
+                <form action="{% url 'comment_delete' comment.pk %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" onclick="return confirm('Видалити коментар?')">Видалити</button>
+                </form>
+            {% endif %}
+            <hr>
+        </li>
+    {% empty %}
+        <li>Коментарів поки немає. Будьте першим!</li>
+    {% endfor %}
+</ul>
+{% endblock %}

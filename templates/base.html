@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Movie Archive{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'movie_list' %}"><strong>Movie Archive</strong></a> | 
+            {% if user.is_authenticated %}
+                <span>Вітаємо, <strong>{{ user.username }}</strong>!</span> | 
+                <a href="{% url 'dialog_list' %}">Повідомлення</a> | 
+                <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Вийти</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}">Увійти</a> | 
+                <a href="{% url 'register' %}">Реєстрація</a>
+            {% endif %}
+        </nav>
+    </header>
+    <hr>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

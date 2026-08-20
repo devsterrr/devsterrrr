@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Каталог фільмів</h2>
+{% if user.is_authenticated %}
+    <a href="{% url 'movie_create' %}">+ Додати фільм</a>
+{% endif %}
+
+<ul>
+    {% for movie in movies %}
+        <li>
+            <a href="{% url 'movie_detail' movie.pk %}"><strong>{{ movie.title }}</strong></a> ({{ movie.year }})
+        </li>
+    {% empty %}
+        <li>Фільмів поки немає.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

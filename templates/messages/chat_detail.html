@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Діалог з {{ recipient.username }}</h2>
+<a href="{% url 'dialog_list' %}">← Назад до діалогів</a>
+<hr>
+
+<div style="max-width: 600px;">
+    {% for msg in messages %}
+        <div style="margin-bottom: 10px; text-align: {% if msg.sender == user %}right{% else %}left{% endif %};">
+            <p style="display: inline-block; padding: 8px 12px; background: {% if msg.sender == user %}#2a2e37{% else %}#181b20{% endif %}; border-radius: 8px;">
+                <strong>{{ msg.sender.username }}:</strong> {{ msg.text }}<br>
+                <small style="color: #9ea3ac;">{{ msg.created_at|date:"d.m H:i" }}</small>
+            </p>
+        </div>
+    {% empty %}
+        <p>Історія повідомлень порожня. Напишіть першим!</p>
+    {% endfor %}
+</div>
+
+<hr>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Надіслати</button>
+</form>
+{% endblock %}
